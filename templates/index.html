@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 25th Birthday – Codnell</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0d1b2a; /* deep night blue */
+      min-height: 100vh;
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* STAR SPARKLES */
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background: #f5d76e; /* soft gold */
+      opacity: 0.8;
+      animation: twinkle 2s infinite alternate;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.2; transform: scale(0.5);}
+      to { opacity: 1; transform: scale(1.2);}
+    }
+
+    .container { max-width: 1000px; margin:auto; padding:40px 20px 80px; position: relative; z-index: 2; }
+
+    /* HERO */
+    .hero { text-align: center; margin-top: 40px; }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 800;
+      color: #ffe066;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    .hero p { margin-top: 12px; font-size: 1.2rem; color: #a2d2ff; }
+    .badge {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffe066;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    /* PHOTOS */
+    .photos {
+      margin-top: 70px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .photo-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      background: #112240;
+    }
+    .photo-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .photo-card:hover img { transform: scale(1.1); }
+    .photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+      display: flex; align-items: flex-end; padding: 15px;
+      color: #ffe066; font-weight: 600; font-size: 1rem;
+    }
+
+    /* MESSAGE */
+    .message {
+      margin-top: 70px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 25px;
+      padding: 40px 30px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      color: #ffe066;
+    }
+
+    .message h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #ffe066;
+    }
+    .message p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #fff;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .icons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 1.6rem;
+      color: #ffe066;
+    }
+
+    .footer {
+      margin-top: 80px;
+      text-align: center;
+      color: #ffe066;
+      opacity: 0.9;
+    }
+    .footer p { margin-top: 8px; font-size: 0.95rem; }
+
+    /* COLORFUL FIREWORKS */
+    .firework {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.9;
+      animation: explode 1.2s ease-out forwards;
+    }
+
+    @keyframes explode {
+      0% { transform: translate(0,0) scale(1); opacity: 1; }
+      100% { transform: translate(var(--x), var(--y)) scale(0.3); opacity: 0; }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.2rem; }
+      .message h2 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <iframe
+    src="https://www.youtube.com/embed/4HSphD6UmIc?autoplay=1&loop=1&playlist=4HSphD6UmIc&mute=1&controls=0&showinfo=0&rel=0"
+    allow="autoplay"
+    style="position:absolute; width:0; height:0; border:0; overflow:hidden;"
+    aria-hidden="true">
+  </iframe>
+
+  <!-- STAR SPARKLES -->
+  <script>
+    for(let i=0;i<80;i++){
+      const star = document.createElement('div');
+      star.className='star';
+      star.style.left=Math.random()*window.innerWidth+'px';
+      star.style.top=Math.random()*window.innerHeight+'px';
+      document.body.appendChild(star);
+    }
+  </script>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Happy 25th Birthday<br><span>Codnell</span> 🎉</h1>
+      <p>Celebrating 25 years of joy, memories & purpose</p>
+      <div class="badge">✨ 16 December • Level 25 Unlocked ✨</div>
+    </section>
+
+    <!-- PHOTOS -->
+    <section class="photos">
+      <div class="photo-card">
+        <img src="static/images/photo1.jpeg" alt="Codnell photo 1">
+        <div class="photo-overlay">Moments to remember</div>
+      </div>
+      <div class="photo-card">
+        <img src="static/images/photo2.jpeg" alt="Codnell photo 2">
+        <div class="photo-overlay">Growth & journey</div>
+      </div>
+      <div class="photo-card">
+        <img src="static/images/photo3.jpg" alt="Codnell photo 3">
+        <div class="photo-overlay">Confidence & dreams</div>
+      </div>
+    </section>
+
+    <!-- MESSAGE -->
+    <section class="message">
+      <h2>A Message to Myself</h2>
+      <p>
+        Cheers to 25 years of learning, resilience, ambition, and becoming.
+        This new chapter is about consistency, courage, faith, and execution.
+        May the years ahead bring wisdom, success, peace, and impact.
+      </p>
+      <p>
+        KUTIYISELA A SWIRI NA NKOKA. ALL THE PAIN OF YESTERDAY. THINGS HAVE CHANGED, THEY AREN'T THE SAME, LOKO SWI ENDLEKA NA MINA ANINGA TSHEMBI, SWI ENDLEKILE. NOW IT'S TIME.
+      </p>
+      <div class="icons">
+        <i class="fa-solid fa-cake-candles"></i>
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-champagne-glasses"></i>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <h3>With gratitude 🤍</h3>
+      <p>© 2025 • Codnell Chabalala</p>
+    </footer>
+
+  </div>
+
+  <!-- COLORFUL FIREWORKS SCRIPT -->
+  <script>
+    function createFirework() {
+      const colors = ['#ffe066','#ffd700','#fff','#a2d2ff','#ff6bcb']; // gold, white, blue, pink
+      const fireworkCount = 8 + Math.floor(Math.random()*5); // 8-12 sparks
+
+      for(let i=0;i<fireworkCount;i++){
+        const f = document.createElement('div');
+        f.className='firework';
+        f.style.left = (Math.random()*window.innerWidth*0.8 + 0.1*window.innerWidth) + 'px';
+        f.style.top = (Math.random()*window.innerHeight/2 + 50) + 'px';
+        const angle = Math.random()*2*Math.PI;
+        const distance = 80 + Math.random()*70;
+        const x = Math.cos(angle)*distance + 'px';
+        const y = Math.sin(angle)*distance + 'px';
+        f.style.setProperty('--x',x);
+        f.style.setProperty('--y',y);
+        f.style.background = colors[Math.floor(Math.random()*colors.length)];
+        f.style.width = f.style.height = (6 + Math.random()*5)+'px';
+        document.body.appendChild(f);
+        setTimeout(()=>f.remove(),1200);
+      }
+    }
+    setInterval(createFirework,700);
+  </script>
+
+  <!-- UNMUTE BUTTON -->
+  <div id="soundPrompt" style="position:fixed; inset:0; background:rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center; z-index:9999;">
+    <button onclick="enableSound()" style="padding:16px 36px; font-size:1.1rem; border:none; border-radius:50px; cursor:pointer; background:#ffe066; font-weight:600; box-shadow:0 8px 25px rgba(0,0,0,0.4);">
+      🔊 Tap to enable birthday music
+    </button>
+  </div>
+
+  <script>
+    function enableSound(){
+      const iframe=document.querySelector('iframe');
+      if(iframe) iframe.src=iframe.src.replace('mute=1','mute=0');
+      document.getElementById('soundPrompt').style.display='none';
+    }
+  </script>
+
+</body>
+</html>
